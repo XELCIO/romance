@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Heart for u</title>
+  <link rel="stylesheet" href="/heart/main.css">
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script>
+    var backgroundMusic = document.getElementById("backgroundMusic");
+
+    function playBackgroundMusic() {
+      backgroundMusic.play();
+    }
+  </script>
+</head>
+
+<body onload="playBackgroundMusic()">
+  <!-- Happy Valentines day Codepen! -->
+  <div class="bgoverlay">
+    <div class="container">
+      <span class="ico">
+        <span class="ico2"></span> <span class="title">Click Me</span>
+      </span>
+      <div class="endtext">
+        <span class="close" title="Restart"><i class="fa fa-times"></i></span>
+        <h1>I love you always. yesterday, today, and forever.</h1>
+        <h2>I hope you are always happy and healthy, far from stress and danger and always blessed. Because you are the most perfect person for me</h2>
+        <h3>~a boy in love~</h3>
+      </div>
+      <audio id="backgroundMusic" autoplay loop>
+        <source src="/music/Sempurna.mp3" type="audio/mp3">
+        <!-- Sertakan format audio lain jika diperlukan -->
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+  </div>  
+  <script src="/heart/main.js"></script>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</body>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>恭喜发财, 喜年快乐</title>
+  <link href='https://fonts.googleapis.com/css?family=Hind' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-color/2.1.2/jquery.color.min.js"></script>  
+</head>
+
+<body>
+  <div class="snowflake">
+    <img class="img01" src="https://i.ibb.co/4FhzFZ4/Angpao-fall.png" width="63" height="68.5">
+  </div>
+  <div class="snowflake">
+    <img class="img02" src="https://i.ibb.co/4FhzFZ4/Angpao-fall.png" width="106" height="117">
+  </div>
+
+  <div class="snowflake">
+    <img class="img03" src="https://i.ibb.co/4FhzFZ4/Angpao-fall.png" width="26.5" height="29.25">
+  </div>
+
+  <div class="snowflake">
+    <img class="img04" src="https://i.ibb.co/4FhzFZ4/Angpao-fall.png" width="73" height="78.5">
+  </div>
+
+  <div class="snowflake">
+    <img class="img05" src="https://i.ibb.co/4FhzFZ4/Angpao-fall.png" width="53" height="58.5">
+  </div>
+
+  <div class="snowflake">
+    <img class="img06" src="https://i.ibb.co/4FhzFZ4/Angpao-fall.png" width="106" height="117">
+  </div>
+
+  <div class="snowflake">
+    <img class="img07" src="https://i.ibb.co/4FhzFZ4/Angpao-fall.png" width="26.5" height="29.25">
+  </div>
+
+  <div class="snowflake">
+    <img class="img08" src="https://i.ibb.co/4FhzFZ4/Angpao-fall.png" width="73" height="78.5">
+  </div>
+
+  <div class="container">
+    <label>
+      <div class="heart">
+        <img src="output-onlinegiftools.gif"></img>
+      </div>
+      <input id="messageState" type="checkbox" style="display:none" />
+    </label>
+    <div class="message">
+      <h1>SELAMAT TAHUN BARU IMLEK 2024</h1>
+      <p>Gōng xǐ fā cái untuk semua di tahun 2024. Di tahun naga ini, semoga segenap keluarga diberikan kesehatan dan rejeki yang melimpah dan kebahagiaan yang senantiasa menemani hari hari kita semua.</p>
+      <p>Semoga dengan bertambahnya tahun dan umur kita semua bisa menjadi pribadi yang lebih bijak dan bisa memahami sesama.</p>
+      <p>恭喜发财, 喜年快乐</p>
+    </div>
+  </div>
+  <script>
+    $("#messageState").on("change", (x) => {
+      $(".message").removeClass("openNor").removeClass("closeNor");
+      if ($("#messageState").is(":checked")) {
+        $(".message").removeClass("closed").removeClass("no-anim").addClass("openNor");
+        $(".heart").removeClass("closeHer").removeClass("openedHer").addClass("openHer");
+        $(".container").stop().animate({
+          "backgroundColor": "#FB0204"
+        }, 2000);
+        console.log("Abrindo");
+      } else {
+        $(".message").removeClass("no-anim").addClass("closeNor");
+        $(".heart").removeClass("openHer").removeClass("openedHer").addClass("closeHer");
+        $(".container").stop().animate({
+          "backgroundColor": "#fce4ec"
+        }, 2000);
+        console.log("fechando");
+      }
+    });
+    $(".message").on('webkitAnimationEnd oanimationend msAnimationEnd animationend', function(e) {
+      console.log("Animation End");
+      if ($(".message").hasClass("closeNor"))
+        $(".message").addClass("closed");
+      $(".message").removeClass("openNor").removeClass("closeNor").addClass("no-anim");
+    });
+    $(".heart").on('webkitAnimationEnd oanimationend msAnimationEnd animationend', function(e) {
+      console.log("Animation End");
+      if (!$(".heart").hasClass("closeHer"))
+        $(".heart").addClass("openedHer").addClass("beating");
+      else
+        $(".heart").addClass("no-anim").removeClass("beating");
+      $(".heart").removeClass("openHer").removeClass("closeHer");
+    });
+  </script>
+</body>

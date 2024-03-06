@@ -1,0 +1,206 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  font-family: sans-serif;
+  overflow: hidden;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.wrapper {
+  text-align: center;
+  z-index: 1;
+  position: relative;
+}
+
+h2 {
+  text-align: center;
+  font-size: 1.5em;
+  color: #ff66c4;
+  margin: 15px 0;
+}
+
+.btn-group {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+button {
+  position: absolute;
+  width: 150px;
+  height: inherit;
+  color: white;
+  font-size: 1.2em;
+  border-radius: 30px;
+  outline: none;
+  cursor: pointer;
+  box-shadow: 0 2px 4px gray;
+  border: 2px solid #e94d58;
+}
+
+button:nth-child(1) {
+  background: #e94d58;
+}
+
+button:nth-child(2) {
+  margin-right: -200px;
+  background: white;
+  color: #e94d58;
+}
+
+canvas {
+  cursor: crosshair;
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100vw;
+  height: 100vh;
+}
+
+#backgroundMusic {
+  display: none;
+}
+
+.content-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.content-container img {
+  width: 100%; /* Sesuaikan dengan lebar yang diinginkan */
+  max-width: 600px; /* Batas maksimum lebar gambar */
+  height: auto; /* Biarkan tinggi mengikuti proporsi asli */
+  margin-bottom: 10px; /* Tambahkan margin bawah jika diperlukan */
+}
+
+/* Gaya untuk slideshow */
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
+  margin-top: 20px;
+}
+
+.mySlides {
+  display: none;
+  max-width: 100%;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.spotify-player {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 700px;
+  width: 354px;
+  padding: 15px;
+  border-radius: 3px;
+  background-color: #111;
+  box-shadow: 0 0 15px #111;
+  color: #fff;
+  overflow: hidden;
+}
+
+/* ... (script CSS yang lain) ... */
+
+/* code with love */
+.code-with-love {
+  position: absolute;
+  right: 30px;
+  bottom: 50px;
+  border-radius: 5px;
+  background-color: #111;
+  padding: 10px;
+  color: #fff;
+  z-index: 99999999;
+}
+
+.code-with-love i.fa-heart,
+.code-with-love span {
+  color: #ff2828;
+}
+
+/* Gaya untuk kontainer pemutaran musik dan pemilihan server */
+.content-container {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.choose-server {
+  background-color: transparent;
+  margin-bottom: 20px; /* Tambahkan margin agar tidak menutupi pemutar musik */
+}
+
+.choose-server select {
+  display: flex;
+  justify-content: center;
+  background-color: transparent;
+  background-image: url(/addons/choose.png);
+  background-position: center;
+  background-size: 100%;
+  color: transparent;
+  height: 30px;
+  font-size: 25px;
+  width: 100%;
+  border: none; /* Menghilangkan garis batas pada select */
+  padding: 5px; /* Menambahkan ruang di sekitar teks di dalam select */
+}
+
+.choose-server select option {
+  color: #000;
+}
+
+.choose-server select:focus-visible {
+  outline: 0;
+}
+
+/* Gaya untuk pemutar musik latar belakang */
+#backgroundMusic {
+  width: 100%;
+  margin-top: 20px;
+}
+
+/* Gaya tambahan jika Anda ingin menyesuaikan tampilan kontrol pemutar audio */
+#backgroundMusic::-webkit-media-controls-panel {
+  display: none !important;
+}
+
+#backgroundMusic::-webkit-media-controls {
+  display: none !important;
+}
+
+#backgroundMusic::-webkit-media-controls-play-button,
+#backgroundMusic::-webkit-media-controls-volume-slider {
+  display: none !important;
+}
